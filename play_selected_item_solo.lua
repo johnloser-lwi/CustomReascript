@@ -1,6 +1,7 @@
 
 function main ()
     local item_count = reaper.CountSelectedMediaItems(0)
+    local has_solo = reaper.AnyTrackSolo()
 
     if item_count > 0 then
         -- Set Time Selection to Items
@@ -47,8 +48,11 @@ function main ()
             if reaper.GetPlayState() == 0 or reaper.GetPlayPosition() > end_time then
                 reaper.OnStopButton()
                 reaper.SoloAllTracks(0)
+
                 -- Reset Undo State
-                reaper.Undo_DoUndo2(0)
+                if has_solo then 
+                    reaper.Undo_DoUndo2(0)
+                end
                 
                 -- Set Time Selection to Items
                 reaper.Main_OnCommand(40290, 1)
