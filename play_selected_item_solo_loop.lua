@@ -2,7 +2,7 @@
 function main ()
     local item_count = reaper.CountSelectedMediaItems(0)
 
-    if item_count > 0 then
+    if item_count > 0 and reaper.GetPlayState() == 0 then
         -- Set Time Selection to Items
         reaper.Main_OnCommand(40290, 1)
 
@@ -44,14 +44,18 @@ function main ()
 
         -- Defer Loop Until Playback Stops
         function DeferLoop()
+            reaper.GetSetRepeatEx(0, 1)
             if reaper.GetPlayState() == 0 or reaper.GetPlayPosition() > end_time then
                 reaper.OnStopButton()
                 reaper.SoloAllTracks(0)
+                
                 -- Reset Undo State
                 reaper.Undo_DoUndo2(0)
-                
+
                 -- Set Time Selection to Items
                 reaper.Main_OnCommand(40290, 1)
+
+                
             else
                 reaper.defer(function() DeferLoop() end)
             end
@@ -63,9 +67,14 @@ function main ()
     end
 end
 
-if reaper.GetPlayState() ~= 0 then
-    reaper.OnStopButton()
-else 
-    main()
-end
+if reaper.GetPlayState() == 0 then
 
+    reaper.atexit(function ()
+        -- Set Repeat False
+        reaper.GetSetRepeatEx(0, 0)
+    end)
+
+    main()
+else 
+    reaper.OnStopButton()
+end
