@@ -8,6 +8,7 @@ if reaper.CountSelectedMediaItems(0) > 0 then
         local  _,track_name = reaper.GetTrackName(track)
 
         if i == 0 then
+            -- set cursor to the beginning of first selected item
             reaper.Main_OnCommand(41173, 1)
         end
 
