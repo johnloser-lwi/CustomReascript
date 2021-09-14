@@ -3,6 +3,7 @@ function main ()
     local item_count = reaper.CountSelectedMediaItems(0)
 
     if item_count > 0 then
+        -- Clear Solo Tracks
         reaper.SoloAllTracks(0)
 
         local start_time = -1
@@ -41,8 +42,11 @@ function main ()
         -- Defer Loop Until Playback Stops
         function DeferLoop()
             if reaper.GetPlayState() == 0 or reaper.GetPlayPosition() > end_time then
-                reaper.SoloAllTracks(0)
                 reaper.OnStopButton()
+                reaper.SoloAllTracks(0)
+                -- Reset Undo State
+                reaper.Undo_DoUndo2(0)
+                
             else
                 reaper.defer(function() DeferLoop() end)
             end
