@@ -9,3 +9,6 @@ Some of my custom reascripts to help my workflow, feel free to use them!
 
 ### group_track
 Group tracks like in every other DAW, you know what I mean! SWS required!
+
+### toggle_folder
+Toggle folder between fully collapsed or fully opened.
