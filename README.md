@@ -2,10 +2,7 @@
 Some of my custom reascripts to help my workflow, feel free to use them!
 
 ### play_selected_item_solo
-* Set edit cursor to the beginning of all selected items
-* Solo all selected items' track
-* Playback (Auto stop when reaching the end of the last item)
-* When playback stops, unsolo all tracks
+Play selected item(s) and solo the track. Auto return to the state before playback when finishes.
 
 ### group_track
 Group tracks like in every other DAW, you know what I mean! SWS required!
@@ -15,3 +12,6 @@ Ungroup and remove folders selected while keeping the children tracks.
 
 ### toggle_folder
 Toggle folder between fully collapsed or fully opened.
+
+### cut_from_markers
+Go to each marker and perform a cut base on your selection.
