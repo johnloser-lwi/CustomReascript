@@ -1,3 +1,5 @@
+-- Toggle folder between fully collapsed or fully opened.
+
 for i = 0, reaper.CountSelectedTracks(0) - 1 do
     local track = reaper.GetSelectedTrack(0, i)
     if reaper.GetMediaTrackInfo_Value(track , "I_FOLDERDEPTH") == 1 then

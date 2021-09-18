@@ -1,3 +1,6 @@
+-- Ungroup and remove folders selected while keeping the children tracks.
+
+
 local target_tracks = {}
 
 -- Identify folder tracks and save to target_tracks

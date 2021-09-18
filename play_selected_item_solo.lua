@@ -1,3 +1,5 @@
+-- Play selected item(s) and solo the track. Auto return to the state before playback when finishes.
+
 
 function main ()
     local item_count = reaper.CountSelectedMediaItems(0)

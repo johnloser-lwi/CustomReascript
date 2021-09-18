@@ -1,3 +1,5 @@
+-- Group tracks like in every other DAW, you know what I mean! SWS required!
+
 local track = reaper.GetSelectedTrack(0, 0)
 local index = reaper.GetMediaTrackInfo_Value(track, 'IP_TRACKNUMBER')
 reaper.InsertTrackAtIndex(index - 1, true)

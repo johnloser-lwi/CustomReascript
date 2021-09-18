@@ -1,4 +1,6 @@
 
+-- Play selected item(s) and solo the track and loop.
+
 function main ()
     local item_count = reaper.CountSelectedMediaItems(0)
     local has_solo = reaper.AnyTrackSolo()
