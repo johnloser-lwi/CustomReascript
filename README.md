@@ -1,8 +1,14 @@
 # CustomReascript
 Some of my custom reascripts to help my workflow, feel free to use them!
 
+
+## Functions
+
 ### play_selected_item_solo
 Play selected item(s) and solo the track. Auto return to the state before playback when finishes.
+
+### play_selected_item_solo_loop
+Play selected item(s) and solo the track and loop.
 
 ### group_track
 Group tracks like in every other DAW, you know what I mean! SWS required!
