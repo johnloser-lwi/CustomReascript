@@ -15,3 +15,6 @@ Toggle folder between fully collapsed or fully opened.
 
 ### cut_from_markers
 Go to each marker and perform a cut base on your selection.
+
+### cut_from_regions
+Go to each region and perform a cut. SWS required!
