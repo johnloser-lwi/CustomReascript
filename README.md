@@ -1,5 +1,7 @@
 # CustomReascript
 Some of my custom reascripts to help my workflow, feel free to use them!
+<br>
+Some scripts will require SWS, please download here -> https://www.sws-extension.org/
 
 
 ## Functions
