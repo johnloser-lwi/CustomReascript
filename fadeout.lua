@@ -1,0 +1,2 @@
+reaper.Main_OnCommand(reaper.NamedCommandLookup("_XENAKIOS_SELITEMSUNDEDCURSELTX"), 0) -- Xenakios/SWS: Select items under edit cursor on selected tracks
+reaper.Main_OnCommand(40510, 0) -- Item: Fade items out from cursor
